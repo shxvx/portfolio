@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiv - Visual and Graphic Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Roboto:wght@400;700&family=Outfit:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px; /* y:32 */
+  padding-bottom: 32px;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px; /* Approximate, adjust as needed. (5924-5857-43)=24px */
+}
+.main-nav a.color-white-80 { /* style_2 */
+  color: rgba(255, 255, 255, 0.8);
+}
+.main-nav a:hover {
+  color: #7f62f4;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* CSS for section section:hero */
+.hero-section {
+  /* style_94: linear-gradient(169deg, #09090b 0%, rgba(9, 9, 11, 0.8) 85.48%, rgba(127, 98, 244, 0.1) 170.95%) */
+  background: linear-gradient(169deg, #09090b 0%, rgba(9, 9, 11, 0.8) 85.48%, rgba(127, 98, 244, 0.1) 100%); /* Adjusted end point for full coverage */
+  padding-top: 60px; /* (193 - 32 - 26 header - 39 margin) approx */
+  padding-bottom: 100px; /* To make space from next section */
+  position: relative;
+  overflow: hidden; /* For blurs */
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px; /* y:193 for title container, relative to hero-section padding */
+}
+.hero-blur-1 { /* style_95 */
+  position: absolute;
+  width: 384px;
+  height: 384px;
+  background-color: rgba(127, 98, 244, 0.2);
+  border-radius: 9999px;
+  filter: blur(64px);
+  top: -11px; /* y: -31 relative to Desktop -1 (-20) */
+  left: -107px; /* x: 4663 relative to Desktop -1 (4790), then adjusted for page-wrapper padding */
+  z-index: 0;
+}
+.hero-blur-2 { /* style_96 */
+  position: absolute;
+  width: 384px;
+  height: 384px;
+  background-color: rgba(24, 24, 27, 0.2);
+  border-radius: 9999px;
+  filter: blur(64px);
+  top: 350px;  /* y: 425 relative to Desktop -1 (-20), adjusted */
+  right: -80px; /* x: 5972 relative to Desktop -1 (4790), then adjusted for page-wrapper padding and width */
+  z-index: 0;
+}
+.hero-title { /* style_97 */
+  margin-bottom: 25px; /* (353-183-164) approx */
+}
+.hero-subtitle { /* style_103 */
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px; /* (485-353-91) approx */
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* (5525-5314-190) approx */
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .hero-title {
+    font-size: 40px; /* Adjusted from fs-72 */
+    line-height: 1.1;
+  }
+  .hero-subtitle {
+    font-size: 18px; /* Adjusted from fs-24 */
+    line-height: 1.5;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .cta-button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  .hero-blur-1, .hero-blur-2 {
+    width: 250px;
+    height: 250px;
+    filter: blur(40px);
+  }
+}
+
+/* CSS for section section:about-services */
+.about-services-section {
+  background-color: #0a0a0e; /* Match body */
+}
+.about-services-grid {
+  display: flex;
+  gap: 9px; /* Calculated gap */
+  align-items: flex-start; /* To handle different content heights */
+}
+.about-me-column {
+  flex: 0 0 820px; /* Width from node 42:150 */
+}
+.what-i-do-column {
+  flex: 0 0 596px; /* Width from node 42:149 */
+  padding-top: 85px; /* (745 - 660) to align "What I Do" title with "About Me" title */
+}
+
+.section-subtitle { /* For "About Me" and "What I Do" */
+  margin-bottom: 12px; /* 785 to 817 for tagline, 745 to 805 for service items */
+}
+.about-me-tagline {
+  margin-bottom: 20px; /* 14:38 (y:817, h:195) to 16:45 (y:956) -> 956 - (817+~75 for one line) */
+  line-height: 1.1; /* For large font sizes */
+}
+.about-me-tagline .fs-64 { font-size: 64px; }
+.about-me-tagline .fs-96 { font-size: 96px; vertical-align: baseline; } /* style_83 */
+
+.about-me-description {
+  margin-bottom: 30px; /* 16:45 (y:956, h:298) to 28:13 (y:1201) -> 1201 - (956+298/2) approx */
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 8px; /* row-gap column-gap */
+}
+.stat-item { /* style_86 */
+  background-color: #363636;
+  border-radius: 33px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 145px;
+}
+.stat-item .stat-number { /* style_89 from textStyle_89 */
+  font-family: 'Outfit', sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+}
+.stat-item .stat-label { /* style_90 from textStyle_90 */
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px; /* Adjusted for better visual from 24px */
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.what-i-do-header { /* style_67 */
+  border-left: 3px solid #7f62f4; /* Visual cue from image */
+  padding-left: 15px;
+  margin-bottom: 30px; /* y:745 to y:805 for first service item */
+}
+.service-item {
+  display: flex;
+  gap: 16px; /* (5727-5677-24) approx */
+  align-items: flex-start;
+  margin-bottom: 30px; /* y:805 to y:937 */
+}
+.service-icon-wrapper { /* style_69 */
+  background-color: rgba(127, 98, 244, 0.15);
+  border-radius: 6px;
+  padding: 12px;
+  display: inline-flex;
+}
+.service-icon {
+  width: 24px;
+  height: 24px;
+}
+.service-title { margin-bottom: 6px; }
+
+.testimonials {
+  margin-top: 40px; /* y:1094 for first testimonial card */
+}
+.testimonial-card { /* style_74 / style_78 */
+  background-color: #242428;
+  padding: 25px;
+  border-radius: 8px; /* From visual, not specified directly */
+  margin-bottom: 20px; /* (1367-1094-257) approx */
+  box-shadow: -10px 4px 10px 0px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+}
+.testimonial-stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+.testimonial-stars img {
+  width: 24px; /* Approximate size */
+  height: auto;
+}
+.testimonial-text { margin-bottom: 20px; }
+.testimonial-author-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.author-name { margin-bottom: 4px; }
+
+@media (max-width: 1024px) {
+  .about-services-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .about-me-column, .what-i-do-column {
+    flex: 1 1 100%;
+    padding-top: 0; /* Reset specific padding */
+  }
+}
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .about-me-tagline .fs-64 { font-size: 40px; }
+  .about-me-tagline .fs-96 { font-size: 60px; }
+}
+
+/* CSS for section section:my-work */
+.my-work-section .section-subtitle { margin-bottom: 8px; } /* 33:122 to 33:123 */
+.my-work-section .section-main-title { margin-bottom: 30px; } /* 33:123 to 36:19 */
+.work-filters {
+  display: flex;
+  justify-content: flex-end; /* Aligned to right in image */
+  gap: 10px;
+  margin-bottom: 40px; /* y:1808 to y:1944 (start of cards) */
+}
+.filter-button { /* style_42 */
+  background-color: #111114;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 40px; /* from style_43 */
+  padding: 0 20px; /* Adjusted for text */
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.filter-button.active, .filter-button:hover {
+  background-color: #7f62f4;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 70px;
+}
+.project-card { /* style_44 for iframe, style_45 for body */
+  background-color: #ffffff; /* style_45 */
+  border: 1px solid #dbdbdb; /* style_44 */
+  border-radius: 3px; /* style_44 */
+  overflow: hidden;
+  color: #000000;
+  width: 324px; /* Fixed width from nodes */
+  margin: 0 auto; /* Center if grid has fewer items */
+}
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.profile-info { display: flex; align-items: center; gap: 10px; }
+.profile-avatar { /* style_63 */
+  width: 30px; height: 30px; border-radius: 50%;
+  background-color: #eee; /* Placeholder */
+}
+.profile-name { font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 14px; margin: 0; } /* style_48 */
+.profile-followers { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 11.8px; color: #737373; margin: 0; } /* style_47 */
+.view-profile-button { /* style_49 */
+  background-color: #0095f6;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.project-image {
+  width: 100%;
+  height: 405px; /* Fixed height */
+  object-fit: cover;
+}
+.project-card-footer { padding: 10px 15px; }
+.actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.action-icons-left { display: flex; gap: 12px; }
+.actions img { width: 24px; height: 24px; cursor: pointer; /* Placeholder for icon styles */ }
+.pagination-dots { text-align: center; margin-bottom: 8px; }
+.pagination-dots span { display: inline-block; width: 6px; height: 6px; background-color: #dbdbdb; border-radius: 50%; margin: 0 2px; }
+.pagination-dots span.active { background-color: #0095f6; } /* style_58 for active, style_59 for inactive (opacity) */
+
+.likes { font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 14px; margin: 0 0 5px 0; } /* style_48 */
+.view-more a { font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 14px; color: #0095f6; text-decoration: none; } /* style_61 */
+.add-comment { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 13.9px; color: #737373; margin: 5px 0 0 0; } /* style_56 */
+
+@media (max-width: 1100px) {
+  .work-grid { gap: 30px; }
+}
+@media (max-width: 768px) {
+  .work-filters { justify-content: center; flex-wrap: wrap; }
+  .filter-button { font-size: 14px; line-height: 30px; padding: 0 15px; }
+}
+
+/* CSS for section section:expertise */
+.expertise-section .section-subtitle { margin-bottom: 8px; }
+.expertise-section .section-main-title { margin-bottom: 20px; }
+.expertise-description {
+  max-width: 610px; /* From node 33:410 width */
+  margin-bottom: 40px; /* y:2718 to y:2784 (skill cards) */
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Approximate from x-positions */
+}
+.skill-card { /* style_34 */
+  background-color: rgba(36, 36, 40, 0.3);
+  border-radius: 8px;
+  padding: 25px;
+}
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* (4915-4873-20) approx */
+  margin-bottom: 20px; /* y:2818 to y:2868 */
+}
+.skill-icon-wrapper { /* style_35 */
+  background-color: rgba(127, 98, 244, 0.2);
+  border-radius: 6px;
+  padding: 10px;
+  display: inline-flex;
+}
+.skill-icon-wrapper img { width: 20px; height: 20px; }
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-tag { /* style_37 */
+  background-color: #242428;
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 12px; /* style_38 */
+  line-height: 16px; /* style_38 */
+  color: rgba(255, 255, 255, 0.6); /* style_38 */
+}
+
+/* CSS for section section:contact */
+.contact-container { /* style_13 */
+  background-color: rgba(36, 36, 40, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  padding: 40px; /* Guessed padding */
+  border-radius: 12px; /* From child cards, assume parent matches or is larger */
+}
+.contact-header { margin-bottom: 40px; /* y:3395 to y:3495 */ }
+.contact-header .section-subtitle { margin-bottom: 8px; }
+.contact-header .section-main-title { margin-bottom: 15px; }
+.contact-description { max-width: 670px; margin: 0 auto; }
+
+.contact-cards-grid {
+  display: flex;
+  gap: 82px; /* (5555 - (4877 + 596)) */
+  justify-content: center;
+}
+.contact-card-left, .contact-card-right {
+  padding: 30px; /* Guessed padding */
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 596px; /* From node width */
+}
+.contact-card-left { /* style_17 */
+  background-color: rgba(36, 36, 40, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.contact-card-right { /* style_28 */
+  background-color: rgba(36, 36, 40, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card-title { margin-bottom: 25px; } /* y:3528 to y:3580/3582 */
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* (4974-4924-20) approx */
+  margin-bottom: 20px; /* y:3580 to y:3652 */
+}
+.contact-icon-wrapper { /* style_19 */
+  background-color: rgba(127, 98, 244, 0.2);
+  border-radius: 9999px;
+  backdrop-filter: blur(1px);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-icon-wrapper img { width: 20px; height: 20px; }
+.contact-info-label { margin-bottom: 2px; }
+.contact-info-value:hover { color: #7f62f4; }
+
+.find-me-title { margin-top: 30px; margin-bottom: 20px; } /* y:3724 */
+.social-links { display: flex; gap: 16px; /* (4974-4910-48) approx */ }
+.social-icon-link { /* style_24 */
+  background-color: rgba(36, 36, 40, 0.5);
+  border-radius: 9999px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.social-icon-link:hover { background-color: rgba(127, 98, 244, 0.3); }
+.social-icon-link img { width: 20px; height: 20px; }
+
+.contact-card-text { margin-bottom: 20px; }
+.email-button { /* style_30 */
+  background-color: rgba(127, 98, 244, 0.8);
+  border: 1px solid rgba(127, 98, 244, 0.3);
+  border-radius: 6px;
+  backdrop-filter: blur(1px);
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* (5810-5778-16) approx */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.email-button:hover { background-color: #7f62f4; }
+.email-button-icon { width: 16px; height: 16px; }
+
+@media (max-width: 1024px) {
+  .contact-cards-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-card-left, .contact-card-right {
+    max-width: 100%;
+  }
+}
+
+/* CSS for section section:footer */
+.footer-section {
+  padding-top: 40px; /* Based on visual separation */
+  padding-bottom: 40px;
+}
+.site-footer-content { /* style_3 */
+  border-top: 1px solid rgba(36, 36, 40, 0.3); /* Changed to border-top */
+  /* backdrop-filter: blur(1px); Removed as it might not be desired for footer */
+  padding: 25px 0; /* y:3047/3080 - y:3013 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-contact-info {
+  display: flex;
+  gap: 20px; /* (5050-4876-158) approx */
+  flex-wrap: wrap;
+}
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* (4876-4860-12) approx */
+}
+.footer-link:hover { color: #7f62f4; }
+.footer-link img { width: 12px; height: 12px; }
+
+.footer-social-links { display: flex; gap: 16px; /* (6116-6084-16) approx */ }
+.footer-social-icon img { width: 16px; height: 16px; opacity: 0.7; }
+.footer-social-icon:hover img { opacity: 1; filter: brightness(0) saturate(100%) invert(48%) sepia(70%) saturate(1352%) hue-rotate(225deg) brightness(95%) contrast(92%); /* Purple color */ }
+
+@media (max-width: 768px) {
+  .site-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-contact-info {
+    justify-content: center;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-header" class="page-wrapper">
+  <header class="site-header">
+    <div class="logo font-space-grotesk fw-700 fs-20 color-white">Shiv.</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#section-about" class="font-space-grotesk fw-400 fs-14 color-white-80">About</a></li>
+        <li><a href="#section-my-work" class="font-space-grotesk fw-400 fs-14 color-white-80">Work</a></li>
+        <li><a href="#section-my-work" class="font-space-grotesk fw-400 fs-14 color-white-80">Projects</a></li>
+        <li><a href="#section-expertise" class="font-space-grotesk fw-400 fs-14 color-white-80">Skills</a></li>
+        <li><a href="#section-contact" class="font-space-grotesk fw-400 fs-14 color-white-80">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+</section>
+<section id="section-hero" class="hero-section">
+  <div class="page-wrapper">
+    <div class="hero-blur-1"></div>
+    <div class="hero-blur-2"></div>
+    <div class="hero-content">
+      <h1 class="hero-title font-space-grotesk fw-700 fs-72 text-center">
+        Design with <span class="color-primary">purpose</span><br>and <span class="color-primary">personal</span>
+      </h1>
+      <p class="hero-subtitle font-outfit fw-400 fs-24 text-center color-white">
+        I craft visuals that connect, not just impress.<br>
+        Every design is rooted in meaning, tailored with intention, and full of personality.<br>
+        Because great design isn’t just seen — it’s felt
+      </p>
+      <div class="hero-buttons text-center">
+        <a href="#section-my-work" class="cta-button">See My Work</a>
+        <a href="#section-contact" class="cta-button">Let Us Talk</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-about" class="about-services-section section-padding">
+  <div class="page-wrapper">
+    <div class="about-services-grid">
+      <div class="about-me-column"> <!-- Node 42:150 -->
+        <h2 class="section-subtitle font-space-grotesk fw-700 fs-24 color-white">About Me</h2> <!-- Node 33:67 -->
+        <h3 class="about-me-tagline font-space-grotesk"> <!-- Node 14:38 -->
+          <span class="color-primary fw-400 fs-64">D</span><span class="color-primary fw-400 fs-64">esign</span><span class="color-primary fw-400 fs-96">.</span>
+          <span class="color-primary fw-400 fs-64">D</span><span class="color-primary fw-400 fs-64">efine</span><span class="color-primary fw-400 fs-96">.</span>
+          <span class="color-primary fw-400 fs-64">D</span><span class="color-primary fw-400 fs-64">eliver</span><span class="color-primary fw-400 fs-96">.</span>
+        </h3>
+        <p class="about-me-description font-space-grotesk fw-400 fs-16 color-white" style="line-height: 20.4px;"> <!-- Node 16:45, style_85 -->
+          I’m Shiv, a visual and graphic designer who turns ideas into bold, eye-catching visuals.<br><br>
+          Design has always been more than work for me — it’s how I think, express, and solve problems. What started as simple sketches and poster edits evolved into a deep love for branding, layout design, digital content, and creative storytelling.<br><br>
+          Over the year, I’ve partnered with startups, influencers, and established companies to craft branding, digital experiences, and content that resonate. Every pixel, color, and frame we create is backed by strategic thinking — because we know good design isn’t just pretty, it performs.
+        </p>
+        <div class="stats-grid"> <!-- Nodes 28:13 to 28:21 -->
+          <div class="stat-item">
+            <span class="stat-number color-primary">3+</span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number color-primary">15+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number color-primary">3+</span>
+            <span class="stat-label">Design Awards</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number color-primary">100%</span>
+            <span class="stat-label">Client satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="what-i-do-column"> <!-- Node 42:149 -->
+        <div class="what-i-do-header"> <!-- Node 33:84 -->
+          <h2 class="section-subtitle font-space-grotesk fw-700 fs-24 color-white">What I Do</h2> <!-- Node 33:85 -->
+        </div>
+        <div class="service-item"> <!-- Graphic Design -->
+          <div class="service-icon-wrapper">
+            <img src="images/33_87.svg" alt="Graphic Design Icon" class="service-icon"> <!-- Node 33:87 -->
+          </div>
+          <div>
+            <h4 class="service-title font-space-grotesk fw-700 fs-18 color-white">Graphic Design</h4> <!-- Node 33:90 -->
+            <p class="service-description font-space-grotesk fw-400 fs-14 color-white-secondary">Creating compelling posters, branding, and marketing visuals that capture attention and communicate messages with clarity.</p> <!-- Node 33:91 -->
+          </div>
+        </div>
+        <div class="service-item"> <!-- Web Design & Development -->
+          <div class="service-icon-wrapper">
+            <img src="images/33_93.svg" alt="Web Design Icon" class="service-icon"> <!-- Node 33:93 -->
+          </div>
+          <div>
+            <h4 class="service-title font-space-grotesk fw-700 fs-18 color-white">Web Design & Development</h4> <!-- Node 33:97 -->
+            <p class="service-description font-space-grotesk fw-400 fs-14 color-white-secondary">Building responsive, modern websites and web apps using React, MERN stack, and best UI/UX practices.</p> <!-- Node 33:98, text adjusted from image -->
+          </div>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial-card"> <!-- Node 42:15 -->
+            <!--合併圖片-->
+            <div class="testimonial-stars">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+            </div>
+            <p class="testimonial-text font-space-grotesk fw-700 fs-18 color-white">Working with Shiv was smooth and exciting — he instantly understood our vibe and nailed the design</p> <!-- Node 42:20 -->
+            <div class="testimonial-author-info">
+              <img src="images/42_16.svg" alt="Emily Dawson" class="author-avatar"> <!-- Node 42:16 -->
+              <div>
+                <p class="author-name font-space-grotesk fw-700 fs-18 color-white">Emily Dawson</p> <!-- Node 42:31 -->
+                <p class="author-title font-space-grotesk fw-700 fs-18" style="color: #c4bfbf;">Creative Director at BrightFrame Studios</p> <!-- Node 42:32 -->
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card"> <!-- Node 42:33 -->
+             <!--合併圖片-->
+            <div class="testimonial-stars">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+              <img src="images/0fbca9bac704083a285a044f21724bc6b971e811.png" alt="Star">
+            </div>
+            <p class="testimonial-text font-space-grotesk fw-700 fs-18 color-white">He took our dull content and turned it into bold, eye-catching creatives. Super responsive and deadline-driven</p> <!-- Node 42:35 -->
+            <div class="testimonial-author-info">
+              <img src="images/42_47.svg" alt="Sophie Green" class="author-avatar"> <!-- Node 42:47 -->
+              <div>
+                <p class="author-name font-space-grotesk fw-700 fs-18 color-white">Sophie Green</p> <!-- Node 42:49 -->
+                <p class="author-title font-space-grotesk fw-700 fs-18" style="color: #c4bfbf;">Founder of Lume Apparel</p> <!-- Node 42:50 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-my-work" class="my-work-section section-padding page-wrapper">
+  <h2 class="section-subtitle font-space-grotesk fw-700 fs-24 color-white">My Work</h2> <!-- Node 33:122 -->
+  <h3 class="section-main-title font-space-grotesk fw-700 fs-36 color-primary">Recent Creative Projects</h3> <!-- Node 33:123 -->
+  <div class="work-filters">
+    <button class="filter-button active">Graphic design</button> <!-- Node 36:19 -->
+    <button class="filter-button">Web design</button> <!-- Node 36:22 -->
+    <button class="filter-button">Video Editing</button> <!-- Node 36:24 -->
+  </div>
+  <div class="work-grid">
+    <!-- Project Card 1 (Visually Middle - Node 38:59) -->
+    <div class="project-card"> <!-- Node 38:59 -->
+      <div class="project-card-header">
+        <div class="profile-info">
+          <img src="images/508776f030fc94658f5daf1c36cd91729b44fe4e.png" alt="Profile" class="profile-avatar"> <!-- Node 38:85 (Link -> edccbit) -->
+          <div>
+            <p class="profile-name">kynetikhaus</p> <!-- Node 38:63 -->
+            <p class="profile-followers">128 followers</p> <!-- Node 38:62 -->
+          </div>
+        </div>
+        <a href="#" class="view-profile-button">View profile</a> <!-- Node 38:114 -->
+      </div>
+      <img src="images/0363d6615c9038f33d64631ac9d24f5b6a9b57ea.png" alt="Project Image 1" class="project-image"> <!-- Node 38:87 -->
+      <div class="project-card-footer">
+        <div class="actions">
+          <div class="action-icons-left">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Like" style="clip-path: inset(0 82.35% 87.88% 0); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Comment" style="clip-path: inset(0 72.79% 87.88% 17.65%); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Share" style="clip-path: inset(12.63% 63.24% 0 27.21%); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+          </div>
+          <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Bookmark" class="action-icon-right" style="clip-path: inset(12.63% 81.62% 0 0); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+        </div>
+        <div class="pagination-dots"><span></span><span class="active"></span><span></span><span></span><span></span></div>
+        <p class="likes">69 likes</p> <!-- Node 38:71 -->
+        <p class="view-more"><a href="#">View more on Instagram</a></p> <!-- Node 38:83 -->
+        <p class="add-comment">Add a comment...</p> <!-- Node 38:73 -->
+      </div>
+    </div>
+    <!-- Project Card 2 (Visually Left - Node 38:29) -->
+    <div class="project-card"> <!-- Node 38:29 -->
+       <div class="project-card-header">
+        <div class="profile-info">
+          <img src="images/508776f030fc94658f5daf1c36cd91729b44fe4e.png" alt="Profile" class="profile-avatar">
+          <div>
+            <p class="profile-name">kynetikhaus</p>
+            <p class="profile-followers">128 followers</p>
+          </div>
+        </div>
+        <a href="#" class="view-profile-button">View profile</a>
+      </div>
+      <img src="images/ca4bdd2e9d181500c98431171f32d33fb8b50e58.png" alt="Project Image 2" class="project-image"> <!-- Node 38:57 -->
+      <div class="project-card-footer">
+        <div class="actions">
+           <div class="action-icons-left">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Like" style="clip-path: inset(0 82.35% 87.88% 0); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Comment" style="clip-path: inset(0 72.79% 87.88% 17.65%); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Share" style="clip-path: inset(12.63% 63.24% 0 27.21%); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+          </div>
+          <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Bookmark" class="action-icon-right" style="clip-path: inset(12.63% 81.62% 0 0); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+        </div>
+        <div class="pagination-dots"><span></span><span class="active"></span><span></span><span></span><span></span></div>
+        <p class="likes">69 likes</p>
+        <p class="view-more"><a href="#">View more on Instagram</a></p>
+        <p class="add-comment">Add a comment...</p>
+      </div>
+    </div>
+    <!-- Project Card 3 (Visually Right - Node 33:135) -->
+    <div class="project-card"> <!-- Node 33:135 -->
+      <div class="project-card-header">
+        <div class="profile-info">
+          <img src="images/508776f030fc94658f5daf1c36cd91729b44fe4e.png" alt="Profile" class="profile-avatar">
+          <div>
+            <p class="profile-name">kynetikhaus</p>
+            <p class="profile-followers">128 followers</p>
+          </div>
+        </div>
+        <a href="#" class="view-profile-button">View profile</a>
+      </div>
+      <img src="images/ca3a37af4f7469b1beb8c1037783a26dddbd9419.png" alt="Project Image 3" class="project-image"> <!-- Node 38:27 -->
+      <div class="project-card-footer">
+        <div class="actions">
+           <div class="action-icons-left">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Like" style="clip-path: inset(0 82.35% 87.88% 0); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Comment" style="clip-path: inset(0 72.79% 87.88% 17.65%); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+            <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Share" style="clip-path: inset(12.63% 63.24% 0 27.21%); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+          </div>
+          <img src="images/aa34824a8bfdece15e8e30af369c56cffd7db10a.png" alt="Bookmark" class="action-icon-right" style="clip-path: inset(12.63% 81.62% 0 0); transform: scale(5.66, 8.25) translateX(-0.05px) translateY(-0.05px);">
+        </div>
+        <div class="pagination-dots"><span></span><span class="active"></span><span></span><span></span><span></span></div>
+        <p class="likes">69 likes</p>
+        <p class="view-more"><a href="#">View more on Instagram</a></p>
+        <p class="add-comment">Add a comment...</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-expertise" class="expertise-section section-padding page-wrapper">
+  <h2 class="section-subtitle font-space-grotesk fw-700 fs-24 color-white">Expertise</h2> <!-- Node 33:407 -->
+  <h3 class="section-main-title font-space-grotesk fw-700 fs-36 color-primary">My Skills</h3> <!-- Node 33:408 -->
+  <p class="expertise-description font-space-grotesk fw-400 fs-16 color-white-secondary">
+    A comprehensive overview of my technical proficiency across various domains, showcasing my versatility as a designer.
+  </p> <!-- Node 33:410 -->
+  <div class="skills-grid">
+    <!-- Skill Card 1: Motion Graphics -->
+    <div class="skill-card"> <!-- Node 33:429, style_34 -->
+      <div class="skill-card-header">
+        <div class="skill-icon-wrapper"><img src="images/33_431.svg" alt="Motion Graphics Icon"></div> <!-- Node 33:430, 33:431 -->
+        <h4 class="skill-title font-space-grotesk fw-700 fs-20 color-white">Motion Graphics</h4> <!-- Node 33:435 -->
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">After effcts</span> <!-- Node 33:437 -->
+        <span class="skill-tag">Photoshop</span> <!-- Node 33:439 -->
+        <span class="skill-tag">Express</span> <!-- Node 33:441 -->
+        <span class="skill-tag">premier pro</span> <!-- Node 42:64 -->
+      </div>
+    </div>
+    <!-- Skill Card 2: UI/UX Design -->
+    <div class="skill-card"> <!-- Node 33:495, style_34 -->
+      <div class="skill-card-header">
+        <div class="skill-icon-wrapper"><img src="images/33_497.svg" alt="UI/UX Icon"></div> <!-- Node 33:496, 33:497 -->
+        <h4 class="skill-title font-space-grotesk fw-700 fs-20 color-white">UI/UX Design</h4> <!-- Node 33:502 -->
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Wireframing</span> <span class="skill-tag">Prototyping</span> <span class="skill-tag">User Research</span>
+        <span class="skill-tag">Responsive Design</span> <span class="skill-tag">Accessibility</span> <span class="skill-tag">Visual Design</span>
+      </div>
+    </div>
+    <!-- Skill Card 3: Design Tools -->
+    <div class="skill-card"> <!-- Node 33:452, style_34 -->
+      <div class="skill-card-header">
+        <div class="skill-icon-wrapper"><img src="images/33_454.svg" alt="Design Tools Icon"></div> <!-- Node 33:453, 33:454 -->
+        <h4 class="skill-title font-space-grotesk fw-700 fs-20 color-white">Design Tools</h4> <!-- Node 33:460 -->
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Adobe Photoshop</span> <span class="skill-tag">Adobe Illustrator</span> <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Adobe XD</span> <span class="skill-tag">Canva</span> <span class="skill-tag">Sketch</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-contact" class="contact-section section-padding">
+  <div class="page-wrapper">
+    <div class="contact-container"> <!-- Node 33:536, style_13 -->
+      <div class="contact-header text-center"> <!-- Node 33:538 -->
+        <h2 class="section-subtitle font-space-grotesk fw-700 fs-24 color-white">Contact</h2> <!-- Node 33:539 -->
+        <h3 class="section-main-title font-space-grotesk fw-700 fs-36 color-primary">Get In Touch</h3> <!-- Node 33:540 -->
+        <p class="contact-description font-space-grotesk fw-400 fs-16 color-white-secondary">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p> <!-- Node 33:541 -->
+      </div>
+      <div class="contact-cards-grid">
+        <div class="contact-card-left"> <!-- Node 33:542, style_17 -->
+          <h4 class="contact-card-title font-space-grotesk fw-700 fs-20 color-white">Let's Talk</h4> <!-- Node 33:543 -->
+          <div class="contact-info-item">
+            <div class="contact-icon-wrapper"><img src="images/33_545.svg" alt="Email Icon"></div> <!-- Node 33:544 -->
+            <div>
+              <p class="contact-info-label font-space-grotesk fw-400 fs-14 color-white-tertiary">Email</p> <!-- Node 33:548 -->
+              <a href="mailto:shivchakshu09@gmail.com" class="contact-info-value font-space-grotesk fw-400 fs-16 color-white">shivchakshu09@gmail.com</a> <!-- Node 33:550 -->
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-wrapper"><img src="images/33_552.svg" alt="Phone Icon"></div> <!-- Node 33:551 -->
+            <div>
+              <p class="contact-info-label font-space-grotesk fw-400 fs-14 color-white-tertiary">Phone</p> <!-- Node 33:554 -->
+              <a href="tel:+917674021049" class="contact-info-value font-space-grotesk fw-400 fs-16 color-white">+91 7674021049</a> <!-- Node 33:556 -->
+            </div>
+          </div>
+          <h4 class="contact-card-title font-space-grotesk fw-700 fs-20 color-white find-me-title">Find Me On</h4> <!-- Node 33:557 -->
+          <div class="social-links">
+            <a href="#" class="social-icon-link"><img src="images/33_559.svg" alt="GitHub"></a> <!-- Node 33:558 -->
+            <a href="#" class="social-icon-link"><img src="images/33_563.svg" alt="LinkedIn"></a> <!-- Node 33:562 -->
+            <a href="#" class="social-icon-link"><img src="images/33_568.svg" alt="Instagram"></a> <!-- Node 33:567 -->
+          </div>
+        </div>
+        <div class="contact-card-right"> <!-- Node 33:572, style_28 -->
+          <h4 class="contact-card-title font-space-grotesk fw-700 fs-20 color-white">Let's Create Something Amazing</h4> <!-- Node 33:573 -->
+          <p class="contact-card-text font-space-grotesk fw-400 fs-16 color-white-secondary">
+            I'm currently available for freelance work and full-time opportunities. Whether you need a stunning website, eye-catching graphics, or innovative UI/UX designs, I'm here to help bring your vision to life.
+          </p> <!-- Node 33:574 -->
+          <p class="contact-card-text font-space-grotesk fw-400 fs-16 color-white-secondary">
+            With expertise in both design and development, I offer a unique perspective that bridges aesthetics and functionality. Let's collaborate to create digital experiences that engage, inspire, and deliver results.
+          </p> <!-- Node 33:575 -->
+          <a href="mailto:shivchakshu09@gmail.com" class="email-button"> <!-- Node 33:576, style_30 -->
+            <img src="images/33_577.svg" alt="" class="email-button-icon"> <!-- Node 33:577 -->
+            <span class="font-space-grotesk fw-500 fs-14 color-white">Send Me an Email</span> <!-- Node 33:580 -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-footer" class="footer-section">
+  <div class="page-wrapper">
+    <footer class="site-footer-content"> <!-- Node 33:41, style_3 -->
+      <div class="footer-copyright font-space-grotesk fw-400 fs-14 color-white-tertiary">
+        © 2025 Shiv Chakshu. All rights reserved. <!-- Node 33:42 -->
+      </div>
+      <div class="footer-contact-info">
+        <a href="mailto:shivchakshu09@gmail.com" class="footer-link font-space-grotesk fw-400 fs-12 color-white-quaternary">
+          <img src="images/33_43.svg" alt="Email"> <!-- Node 33:43 -->
+          shivchakshu09@gmail.com <!-- Node 33:46 -->
+        </a>
+        <a href="tel:+917674021049" class="footer-link font-space-grotesk fw-400 fs-12 color-white-quaternary">
+          <img src="images/33_47.svg" alt="Phone"> <!-- Node 33:47 -->
+          +917674021049 <!-- Node 33:50 -->
+        </a>
+      </div>
+      <div class="footer-social-links">
+        <a href="#" class="footer-social-icon"><img src="images/33_52.svg" alt="GitHub"></a> <!-- Node 33:51 -->
+        <a href="#" class="footer-social-icon"><img src="images/33_56.svg" alt="LinkedIn"></a> <!-- Node 33:55 -->
+        <a href="#" class="footer-social-icon"><img src="images/33_61.svg" alt="Instagram"></a> <!-- Node 33:60 -->
+      </div>
+    </footer>
+  </div>
+</section>
+</body>
+</html>
